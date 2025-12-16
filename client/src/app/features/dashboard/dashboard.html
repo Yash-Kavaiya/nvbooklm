@@ -1,0 +1,33 @@
+<div class="dashboard-header">
+    <h1 class="nv-text">Welcome to nvbooklm</h1>
+    <button mat-flat-button class="nv-button">
+        <mat-icon>add</mat-icon>
+        Create new notebook
+    </button>
+</div>
+
+<h3>Recent notebooks</h3>
+<div class="notebook-grid">
+    <mat-card class="create-card" mat-ripple>
+        <div class="create-content">
+            <div class="plus-circle">
+                <mat-icon>add</mat-icon>
+            </div>
+            <span>Create new notebook</span>
+        </div>
+    </mat-card>
+
+    <mat-card *ngFor="let nb of notebooks" class="notebook-card" [routerLink]="['/notebook', nb.id]" mat-ripple>
+        <div class="card-cover" [style.background]="nb.cover">
+            <div class="card-type">
+                <mat-icon>description</mat-icon>
+            </div>
+        </div>
+        <mat-card-content>
+            <h3 class="card-title">{{nb.title}}</h3>
+            <div class="card-meta">
+                <span>{{nb.date}}</span> • <span>{{nb.sources}} sources</span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

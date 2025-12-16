@@ -1,0 +1,16 @@
+<div class="panel-header">
+    <h2>Sources</h2>
+    <button mat-icon-button>
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
+
+<div class="sources-list">
+    <div class="source-item" *ngFor="let source of sources">
+        <mat-checkbox color="primary" [checked]="true"></mat-checkbox>
+        <div class="source-icon">
+            <mat-icon>{{source.type === 'pdf' ? 'picture_as_pdf' : 'description'}}</mat-icon>
+        </div>
+        <span class="source-title">{{source.title}}</span>
+    </div>
+</div>

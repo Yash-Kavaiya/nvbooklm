@@ -1,0 +1,48 @@
+/* Global Styles - NVIDIA Theme */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+/* Using purple-green as base for dark mode */
+
+:root {
+    --nv-green: #76B900;
+    --nv-dark: #1A1A1A;
+    --nv-darker: #000000;
+    --nv-light: #FFFFFF;
+    --nv-gray: #333333;
+    --nv-text-gray: #999999;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "DIN Next W01", "Roboto", "Helvetica Neue", sans-serif;
+    background-color: var(--nv-dark);
+    color: var(--nv-light);
+}
+
+/* Overriding Material defaults for Dark Mode */
+.mat-mdc-card {
+    background-color: var(--nv-gray) !important;
+    color: var(--nv-light) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--nv-light);
+}
+
+a {
+    color: var(--nv-green);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

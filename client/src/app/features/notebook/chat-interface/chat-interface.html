@@ -1,0 +1,16 @@
+<div class="chat-messages">
+    <div class="message-wrapper" *ngFor="let msg of messages" [class.user-message]="msg.role === 'user'">
+        <div class="message-bubble">
+            {{msg.content}}
+        </div>
+    </div>
+</div>
+
+<div class="chat-input-container">
+    <div class="input-box">
+        <input type="text" placeholder="Type a message..." [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
+        <button mat-icon-button color="primary" (click)="sendMessage()" [disabled]="!newMessage.trim()">
+            <mat-icon>send</mat-icon>
+        </button>
+    </div>
+</div>

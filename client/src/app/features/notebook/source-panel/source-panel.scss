@@ -1,0 +1,80 @@
+.panel-header {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    background-color: #1a1a1a;
+
+    h2 {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    button mat-icon {
+        color: var(--nv-green);
+    }
+}
+
+.sources-list {
+    padding: 8px;
+    overflow-y: auto;
+    flex: 1;
+    background-color: #1a1a1a;
+}
+
+.source-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    gap: 12px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2a2a2a;
+    }
+}
+
+.source-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #111;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nv-green);
+    flex-shrink: 0;
+
+    mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.source-title {
+    font-size: 14px;
+    color: #eee;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+/* Material Checkbox override for Green */
+::ng-deep .mat-mdc-checkbox.mat-primary .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,
+::ng-deep .mat-mdc-checkbox.mat-primary .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+    background-color: var(--nv-green) !important;
+    border-color: var(--nv-green) !important;
+}
+
+::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not(:disabled)~.mdc-checkbox__background {
+    border-color: #666 !important;
+}

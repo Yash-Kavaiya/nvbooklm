@@ -1,0 +1,76 @@
+.app-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: black !important;
+    /* NVIDIA Black Headers */
+    color: white !important;
+    border-bottom: 2px solid var(--nv-green);
+    /* Green accent line */
+}
+
+.app-title {
+    font-family: 'Courier New', Courier, monospace;
+    /* Techy font */
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 24px;
+
+    &::first-letter {
+        color: var(--nv-green);
+    }
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.app-container {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #121212;
+}
+
+.app-sidenav {
+    width: 256px;
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+    color: white;
+
+    mat-nav-list {
+        padding-top: 16px;
+    }
+}
+
+.app-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    /* Darker background */
+}
+
+.active {
+    background-color: rgba(118, 185, 0, 0.1) !important;
+    /* Transparent green */
+    color: var(--nv-green) !important;
+    border-right: 3px solid var(--nv-green);
+
+    mat-icon {
+        color: var(--nv-green) !important;
+    }
+}
+
+/* Material overrides for sidebar links */
+a[mat-list-item] {
+    color: #ccc !important;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
