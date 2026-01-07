@@ -74,3 +74,31 @@ a[mat-list-item] {
         background-color: rgba(255, 255, 255, 0.05);
     }
 }
+
+/* User profile */
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    strong {
+        color: white;
+    }
+
+    small {
+        color: #888;
+        font-size: 12px;
+    }
+}
+
+.app-title {
+    cursor: pointer;
+}

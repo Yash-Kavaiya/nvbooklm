@@ -2,11 +2,29 @@
     <button mat-icon-button (click)="snav.toggle()">
         <mat-icon>menu</mat-icon>
     </button>
-    <span class="app-title">nvbooklm</span>
+    <span class="app-title" routerLink="/">nvbooklm</span>
     <span class="spacer"></span>
-    <button mat-icon-button>
+
+    @if (authService.user(); as user) {
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+        @if (user.photoURL) {
+        <img [src]="user.photoURL" alt="Profile" class="user-avatar">
+        } @else {
         <mat-icon>account_circle</mat-icon>
+        }
     </button>
+    <mat-menu #userMenu="matMenu">
+        <div class="user-info">
+            <strong>{{ user.displayName || 'User' }}</strong>
+            <small>{{ user.email }}</small>
+        </div>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="signOut()">
+            <mat-icon>logout</mat-icon>
+            <span>Sign out</span>
+        </button>
+    </mat-menu>
+    }
 </mat-toolbar>
 
 <mat-sidenav-container class="app-container">

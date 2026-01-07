@@ -23,6 +23,7 @@
   "private": true,
   "packageManager": "npm@10.9.3",
   "dependencies": {
+    "@angular/animations": "^21.0.5",
     "@angular/cdk": "^21.0.3",
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
@@ -37,7 +38,8 @@
     "highlight.js": "^11.11.1",
     "marked": "^17.0.1",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zone.js": "^0.16.0"
   },
   "devDependencies": {
     "@angular/build": "^21.0.3",
